@@ -1,3 +1,0 @@
-[food_delivery.notification_service]
-kafkaBootstrapServers = "kafka:9092"
-servicePort = 8086

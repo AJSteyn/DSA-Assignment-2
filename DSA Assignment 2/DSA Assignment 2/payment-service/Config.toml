@@ -1,6 +1,0 @@
-[food_delivery.payment_service]
-dbHost = "mongodb"
-dbPort = 27017
-dbName = "payment_db"
-kafkaBootstrapServers = "kafka:9092"
-servicePort = 8084
