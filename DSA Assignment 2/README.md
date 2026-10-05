@@ -352,36 +352,7 @@ deliveries {
 
 ---
 
-## 🚀 Getting Started
 
-### Prerequisites
-
-- [Docker](https://docs.docker.com/get-docker/) (version 20.10+)
-- [Docker Compose](https://docs.docker.com/compose/install/) (version 2.0+)
-- [Ballerina](https://ballerina.io/downloads/) (Swan Lake 2201.12.0) - for local development
-
-### Quick Start
-
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-   cd distributed-food-delivery-platform
-   ```
-
-2. **Start all services:**
-   ```bash
-   docker-compose up -d --build
-   ```
-
-3. **Verify services are running:**
-   ```bash
-   docker-compose ps
-   ```
-
-4. **Check Kafka topics:**
-   ```bash
-   docker exec kafka kafka-topics --list --bootstrap-server localhost:9092
-   ```
 
 5. **Test the platform (see Testing section below)**
 
@@ -469,21 +440,6 @@ curl http://localhost:8086/notifications/recipient/{customerId}
 curl http://localhost:8087/admin/dashboard
 ```
 
-### Automated Testing Script
-
-For automated end-to-end testing, use the provided test scripts:
-
-**Linux/Mac:**
-```bash
-chmod +x test-platform.sh
-./test-platform.sh
-```
-
-**Windows:**
-```cmd
-test-platform.bat
-```
-
 The automated test script will:
 1. Register a customer and add delivery address
 2. Register a restaurant and add menu items
@@ -554,29 +510,6 @@ distributed-food-delivery-platform/
 
 ---
 
-## ✅ Implementation Status
-
-### Completed Features
-
-- ✅ All 7 microservices implemented (Customer, Restaurant, Order, Payment, Delivery, Notification, Admin)
-- ✅ RESTful API endpoints for all services
-- ✅ Apache Kafka event-driven communication
-- ✅ Order lifecycle state machine with valid transitions
-- ✅ Kafka consumer logic implemented for:
-  - Order Service: Consumes payments.completed, delivery.assigned, delivery.completed
-  - Delivery Service: Consumes orders.confirmed, orders.cancelled
-  - Restaurant Service: Consumes orders.created
-  - Customer Service: Consumes orders.created
-  - Notification Service: Consumes all order, payment, and delivery events
-  - Admin Service: Consumes all events for analytics
-- ✅ Docker containerization for all services
-- ✅ Docker Compose orchestration
-- ✅ MongoDB initialization scripts
-- ✅ Driver auto-assignment logic with distance calculation
-- ✅ Payment processing simulation (90% success rate)
-- ✅ Multi-channel notification system (Email, SMS, Push, In-App)
-- ✅ Admin dashboard with real-time analytics
-- ✅ Automated test scripts (Linux/Mac and Windows)
 
 ### Key Design Decisions
 
@@ -585,27 +518,3 @@ distributed-food-delivery-platform/
 3. **Service Independence**: Each service has its own database schema and business logic
 4. **Fault Tolerance**: Services can operate independently; Kafka provides message durability
 5. **Scalability**: Horizontal scaling through Kafka partitioning and Docker replicas
-
-### Future Enhancements
-
-- [ ] Replace in-memory storage with actual MongoDB connections
-- [ ] Add authentication and authorization
-- [ ] Implement circuit breakers for service resilience
-- [ ] Add comprehensive error handling and retry logic
-- [ ] Implement distributed tracing
-- [ ] Add metrics and monitoring (Prometheus, Grafana)
-- [ ] Implement API rate limiting
-- [ ] Add webhooks for external integrations
-
----
-
-## 👥 Team Members
-
-| # | Name | Student Number | Role |
-|---|------|---------------|------|
-| 1 | Dyrall Beukes |  | Customer Service & Infrastructure |
-| 2 | Mazi de Klerk |  | Restaurant Service & Database |
-| 3 | Junior Steyn |  | Order Service & Payment Service |
-| 4 | Aden Beukes |  | Delivery Service & Testing |
-| 5 | Grace Urikos |  | Notification & Admin Service & Documentation |
-
