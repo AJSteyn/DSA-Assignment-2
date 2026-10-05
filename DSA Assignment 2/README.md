@@ -6,7 +6,7 @@ A scalable, distributed Food Delivery Platform built with microservices architec
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Architecture Overview](#architecture-overview)
 - [System Architecture Diagram](#system-architecture-diagram)
@@ -23,7 +23,7 @@ A scalable, distributed Food Delivery Platform built with microservices architec
 
 ---
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 The platform follows a **microservices architecture** pattern where each service is independently deployable and communicates asynchronously through **Apache Kafka** event streaming. Services are containerised using **Docker** and orchestrated with **Docker Compose**.
 
@@ -39,7 +39,7 @@ The platform follows a **microservices architecture** pattern where each service
 
 ---
 
-## 🔧 System Architecture Diagram
+##  System Architecture Diagram
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -75,7 +75,7 @@ The platform follows a **microservices architecture** pattern where each service
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
@@ -88,7 +88,7 @@ The platform follows a **microservices architecture** pattern where each service
 
 ---
 
-## 🔌 Microservices
+##  Microservices
 
 ### 1. Customer Service (Port 8081)
 Manages user accounts, delivery addresses, and historical order data.
@@ -117,7 +117,7 @@ Manages digital menus, real-time inventory, and kitchen operating hours.
 | GET | `/restaurants/{id}/menu` | Get full menu |
 | PUT | `/restaurants/{id}/status` | Toggle open/closed |
 
-### 3. Order Service (Port 8083) ⭐ Core Service
+### 3. Order Service (Port 8083)  Core Service
 Manages the central order state machine and lifecycle.
 
 **Key Endpoints:**
@@ -180,7 +180,7 @@ Generates reports on restaurant statistics and delivery performance.
 
 ---
 
-## 📨 Kafka Topics & Event Flow
+##  Kafka Topics & Event Flow
 
 ### Topic Architecture
 
@@ -236,7 +236,7 @@ Customer places order
 
 ---
 
-## 📊 Database Schema Design
+##  Database Schema Design
 
 Each microservice owns its data store following the **Database per Service** pattern.
 
@@ -318,7 +318,7 @@ deliveries {
 
 ---
 
-## 🔄 Order Lifecycle State Machine
+##  Order Lifecycle State Machine
 
 ```
                     ┌────────────────────────────────────────┐
@@ -368,7 +368,7 @@ docker-compose down -v
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 ### End-to-End Order Flow Test
 
@@ -452,7 +452,7 @@ The automated test script will:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 distributed-food-delivery-platform/
