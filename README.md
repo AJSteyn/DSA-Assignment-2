@@ -1,5 +1,5 @@
 # DSA-Assignment-2
-Assignment 2: Distributed Food Delivery Platform
+Assignment 2: Distributed Food Delivery Platform.
 This repository contains our project for assignment 2
 
 # Group Members
