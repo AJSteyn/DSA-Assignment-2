@@ -1,0 +1,6 @@
+[food_delivery.customer_service]
+dbHost = "mongodb"
+dbPort = 27017
+dbName = "customer_db"
+kafkaBootstrapServers = "kafka:9092"
+servicePort = 8081
