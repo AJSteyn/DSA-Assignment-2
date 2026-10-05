@@ -1,0 +1,26 @@
+# Ballerina build outputs
+target/
+*.jar
+*.bala
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+
+# Node modules (if any)
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# MongoDB data
+mongo-data/
