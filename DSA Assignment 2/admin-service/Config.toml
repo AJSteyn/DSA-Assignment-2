@@ -1,8 +1,0 @@
-[food_delivery.admin_service]
-kafkaBootstrapServers = "kafka:9092"
-servicePort = 8087
-customerServiceUrl = "http://customer-service:8081"
-restaurantServiceUrl = "http://restaurant-service:8082"
-orderServiceUrl = "http://order-service:8083"
-paymentServiceUrl = "http://payment-service:8084"
-deliveryServiceUrl = "http://delivery-service:8085"
